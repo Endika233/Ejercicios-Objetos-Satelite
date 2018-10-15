@@ -11,12 +11,18 @@ namespace Ejercicios_Objetos_Satelite
         static void Main(string[] args)
         {
             bool orbita;
-            Satelite s1 = new Satelite(1000,1000,1000);
+            Satelite s1 = new Satelite(50,50,1000);
+            s1.VariaAltura(-1000);
+            s1.VariaPosicion(-10, 10);
             s1.PrintPosicion();
             orbita = s1.EnOrbita();
             if (orbita)
             {
                 Console.WriteLine("Hasta el infinito y más allá");
+            }
+            else if (!orbita)
+            {
+                Console.WriteLine("Echa gasofa al cacharro");
             }
 
             Console.ReadKey();
